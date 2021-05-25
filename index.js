@@ -169,6 +169,9 @@ class TrezorKeyring extends EventEmitter {
                   nonce: this._normalize(tx.nonce),
                   gasLimit: this._normalize(tx.gasLimit),
                   gasPrice: this._normalize(tx.gasPrice),
+                  feeCurrency: this._normalize(tx.feeCurrency),
+                  gatewayFeeRecipient: this._normalize(tx.gatewayFeeRecipient),
+                  gatewayFee: this._normalize(tx.gatewayFee),
                 },
               }).then(response => {
                 if (response.success) {
